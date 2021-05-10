@@ -143,11 +143,21 @@ function sendTransaction(isAdding) {
     amountEl.value = "";
   });
 }
+//starter code...
+//document.querySelector("#add-btn").onclick = function() {
+//   sendTransaction(true);
+// };
 
-document.querySelector("#add-btn").onclick = function() {
+//document.querySelector("#sub-btn").onclick = function() {
+//   sendTransaction(false);
+// };
+
+document.querySelector('#add-btn').addEventListener(`click`, event => {
+  event.preventDefault();
   sendTransaction(true);
-};
+});
 
-document.querySelector("#sub-btn").onclick = function() {
+document.querySelector(`#sub-btn`).addEventListener(`click`, event => {
+  event.preventDefault();
   sendTransaction(false);
-};
+});
